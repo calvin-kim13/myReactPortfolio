@@ -17,7 +17,7 @@
   border: 2px solid red;
   position: absolute;
   top: 12vh;
-  height: calc(100vh - 12vh);
+  height: 88vh;
   width: 100%;
 }
 
@@ -27,5 +27,7 @@
     top: 0;
     width: calc(100% - 71px);
     height: 100vh;
+    /* if i want to use image uncomment this */
+    /* background-image: url(./assets//background.svg); */
   }
 }
