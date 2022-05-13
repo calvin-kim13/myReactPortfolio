@@ -14,15 +14,15 @@ import profile from "../assets/profile.png";
 const NavIcon = styled(Link)`
   display: none;
   @media screen and (min-width: 1024px) {
-    margin-left: 15.5rem;
     font-size: 2rem;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: absolute;
-    top: 3%;
-    color: #fff;
-    opacity: 0.7;
+    justify-content: flex-end;
+    padding: 1rem 1.2rem;
+    width: 100%;
+    .arrows {
+      color: var(--grey);
+      opacity: 0.7;
+    }
   }
 `;
 
@@ -35,7 +35,7 @@ const SidebarNav = styled.nav`
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 0;
+  top: 0;
   transition: 350ms;
   z-index: 100000;
   .nav-link-wrapper {
@@ -58,7 +58,6 @@ const SidebarNav = styled.nav`
     &:hover {
       opacity: 1;
       cursor: pointer;
-      font-weight: bold;
       border-bottom: 4px solid var(--dark-purple);
       background-color: #2e313c;
       border-radius: 5px;
@@ -77,6 +76,10 @@ const SidebarNav = styled.nav`
     display: none;
   }
   @media screen and (min-width: 1024px) {
+    font-family: var(--titillium-font);
+    font-weight: var(--titillium-regular);
+    letter-spacing: 0.1rem;
+    align-items: flex-start;
     width: 300px;
     height: 100vh;
     top: 0;
@@ -97,14 +100,11 @@ const SidebarNav = styled.nav`
       width: 100%;
       font-size: 1rem;
       &:hover {
-        padding-left: 2.4rem;
+        padding-left: 2.5rem;
         border-left: 4px solid var(--dark-purple);
         background: #2e313c;
         border-bottom: none;
         border-radius: 0;
-        /* .icon {
-          color: var(--dark-purple);
-        } */
       }
     }
     .nav-link span {
@@ -115,7 +115,6 @@ const SidebarNav = styled.nav`
       border-left: 4px solid var(--dark-purple);
       border-bottom: none;
       border-radius: 0;
-      /* border: none; */
       background: #2e313c;
     }
     .link-wrap {
@@ -129,9 +128,6 @@ const SidebarNav = styled.nav`
 
 const SidebarWrap = styled.div`
   width: 100%;
-  .arrows {
-    color: var(--grey);
-  }
   .image-social-wrapper {
     display: none;
   }
@@ -142,7 +138,6 @@ const SidebarWrap = styled.div`
       align-items: center;
       justify-content: center;
       margin-bottom: 1.5rem;
-      margin-top: -10rem;
     }
     .social-links-wrapper ul {
       display: flex;
@@ -183,12 +178,12 @@ const Sidebar = () => {
         <SidebarWrap>
           <NavIcon to="#">
             {sidebar ? (
-              <IoIcons.IoIosArrowDropleftCircle
+              <IoIcons.IoIosArrowDropleft
                 onClick={showSidebar}
                 className="arrows"
               />
             ) : (
-              <IoIcons.IoIosArrowDroprightCircle
+              <IoIcons.IoIosArrowDropright
                 onClick={showSidebar}
                 className="arrows"
               />
@@ -199,8 +194,8 @@ const Sidebar = () => {
               alt="Calvin Kim"
               src={profile}
               sx={{
-                width: 150,
-                height: 150,
+                width: 100,
+                height: 100,
                 border: "4px solid #2e313c",
                 marginBottom: ".8rem",
               }}
@@ -209,7 +204,7 @@ const Sidebar = () => {
               variant="overline"
               fontSize="1rem"
               fontWeight="bold"
-              sx={{ color: "#fff" }}
+              sx={{ color: "#e7dfdd" }}
             >
               @Calvin Kim
             </Typography>

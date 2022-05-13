@@ -9,10 +9,13 @@ import * as AiIcons from "react-icons/ai";
 const Home = () => {
   return (
     <HomeWrapper className="main">
-      <video src={background} autoPlay loop muted></video>
+      {/* <video src={background} autoPlay loop muted playsInline></video> */}
+      <video loop={true} muted={true} autoPlay={true} playsInline={true}>
+        <source src={background} />
+      </video>
       <WelcomeWrapper>
         <h2>Hi, I'm</h2>
-        <h3>Calvin Kim</h3>
+        <h3 className="animation">Calvin Kim</h3>
         <h5>Software Developer</h5>
         <h6>Passion in the Front-End</h6>
         <Button className="home-btn">Contact me</Button>
@@ -107,7 +110,26 @@ const Home = () => {
 };
 
 const HomeWrapper = styled.div`
-  background: rgba(0, 0, 0, 0.7);
+  .animation {
+    text-shadow: 0 0 15px;
+    animation: animate 3s infinite linear;
+  }
+  @keyframes animate {
+    0%,
+    100% {
+      color: #a5f8f6;
+    }
+    25% {
+      color: #fe67fb;
+    }
+    50% {
+      color: #5030e1;
+    }
+    75% {
+      color: #de3dec;
+    }
+  }
+  background: rgba(0, 0, 0, 0.8);
   color: #fff;
   video {
     object-fit: cover;
@@ -130,7 +152,7 @@ const WelcomeWrapper = styled.div`
   padding: 2rem 3rem;
   h2 {
     font-size: 2.2rem;
-    font-weight: var(--titillium-black);
+    font-weight: var(--titillium-regular);
     letter-spacing: 0.4rem;
   }
   h3 {
@@ -210,6 +232,25 @@ const SocialLinkWrapper = styled.div`
     color: var(--dark-purple);
     transition: 0.3s ease-in-out all;
   }
+  /* .icon {
+    text-shadow: 0 0 0.5rem;
+    animation: animate 1s infinite linear;
+  }
+  @keyframes animate {
+    0%,
+    100% {
+      color: deeppink;
+    }
+    25% {
+      color: deepskyblue;
+    }
+    50% {
+      color: lawngreen;
+    }
+    75% {
+      color: yellow;
+    }
+  } */
   @media screen and (min-width: 768px) {
     width: 6rem;
     bottom: 5rem;
