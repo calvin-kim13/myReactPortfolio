@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;700&family=Source+Code+Pro&family=Titillium+Web:wght@200;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;700&family=Source+Code+Pro&family=Titillium+Web:wght@200;300;400;700;900&display=swap");
 :root {
   /* colors */
   --dark: #0e0b16;
   --light-purple: #a239ca;
-  --dark-purple: #4717f6;
+  --dark-purple: #5c54db;
   --dark-blue: #5c6bc0;
   --grey: #e7dfdd;
 
@@ -19,6 +19,8 @@
   --open-sans-regular: 400;
   --open-sans-medium: 500;
   --open-sans-semi-bold: 600;
+  --open-sans-bold: 700;
+  --open-sans-black: 800;
 
   --titillium-extra-light: 200;
   --titillium-light: 300;

@@ -123,6 +123,9 @@ const SidebarNav = styled.nav`
       justify-content: flex-start;
       align-items: center;
     }
+    .icon {
+      font-size: 1.2rem;
+    }
   }
 `;
 
