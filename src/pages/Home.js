@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import background from "../assets/background3.mp4";
 import Button from "../components/Button";
-import * as FaIcons from "react-icons/fa";
-import * as FiIcons from "react-icons/fi";
-import * as AiIcons from "react-icons/ai";
+import SideSocialLinks from "../components/SideSocialLinks";
 
 const Home = () => {
   return (
@@ -14,47 +12,13 @@ const Home = () => {
         <source src={background} />
       </video>
       <WelcomeWrapper>
-        <h2>Hi, I'm</h2>
-        <h3 className="animation">Calvin Kim</h3>
-        <h5>Software Developer</h5>
-        <h6>Passion in the Front-End</h6>
+        <div className="h2">Hi, I'm</div>
+        <div className="h3 animation">Calvin Kim</div>
+        <div className="h5">Software Developer</div>
+        <div className="h6">Passion in the Front-End</div>
         <Button className="home-btn">Contact me</Button>
       </WelcomeWrapper>
-      <SocialLinkWrapper>
-        <span></span>
-        <ul>
-          <li>
-            <a
-              href="https://github.com/calvin-kim13"
-              target="_blank"
-              rel="noreferrer"
-              className="social-link"
-            >
-              <FiIcons.FiGithub />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/calvin-kim-143aa51a2/"
-              target="_blank"
-              rel="noreferrer"
-              className="social-link"
-            >
-              <FaIcons.FaLinkedinIn />
-            </a>
-          </li>
-          <li>
-            <a
-              href="../assets/resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="social-link"
-            >
-              <AiIcons.AiOutlineFile />
-            </a>
-          </li>
-        </ul>
-      </SocialLinkWrapper>
+      <SideSocialLinks />
       <DependencyWrapper>
         <pre>
           <pre>&#123;</pre>
@@ -150,17 +114,17 @@ const HomeWrapper = styled.div`
 const WelcomeWrapper = styled.div`
   font-family: var(--titillium-font);
   padding: 2rem 3rem;
-  h2 {
+  .h2 {
     font-size: 2.2rem;
     font-weight: var(--titillium-regular);
     letter-spacing: 0.4rem;
   }
-  h3 {
-    font-size: 2.2rem;
+  .h3 {
+    font-size: 2.4rem;
     font-weight: var(--titillium-black);
     letter-spacing: 0.4rem;
   }
-  h5 {
+  .h5 {
     font-size: 1.1rem;
     font-weight: var(--titillium-regular);
     letter-spacing: 0.25rem;
@@ -168,103 +132,42 @@ const WelcomeWrapper = styled.div`
     margin-top: 0.5rem;
     opacity: 0.8;
   }
-  h6 {
+  .h6 {
     font-size: 0.7rem;
     font-weight: var(--titillium-extra-light);
     letter-spacing: 0.2rem;
     opacity: 0.7;
   }
   @media screen and (min-width: 1024px) {
-    h2 {
+    .h2 {
       font-size: 1.6rem;
     }
-    h3 {
+    .h3 {
       font-size: 3rem;
       margin-top: -1rem;
     }
-    h5 {
+    .h5 {
       font-size: 1.1rem;
       margin-top: 0;
     }
-    h6 {
+    .h6 {
       font-size: 0.7rem;
     }
   }
   @media screen and (min-width: 1200px) {
-    h2 {
+    .h2 {
       font-size: 2.2rem;
     }
-    h3 {
+    .h3 {
       font-size: 4rem;
       margin-top: -1.3rem;
     }
-    h5 {
+    .h5 {
       font-size: 1.4rem;
       margin-top: -0.6rem;
     }
-    h6 {
+    .h6 {
       font-size: 0.8rem;
-    }
-  }
-`;
-
-const SocialLinkWrapper = styled.div`
-  height: 10rem;
-  width: 4rem;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-  ul li {
-    list-style: none;
-    line-height: 2.5rem;
-  }
-  .social-link {
-    color: #fff;
-    font-size: 1.3rem;
-    opacity: 0.7;
-  }
-  .social-link:hover {
-    opacity: 1;
-    color: var(--dark-purple);
-    transition: 0.3s ease-in-out all;
-  }
-  /* .icon {
-    text-shadow: 0 0 0.5rem;
-    animation: animate 1s infinite linear;
-  }
-  @keyframes animate {
-    0%,
-    100% {
-      color: deeppink;
-    }
-    25% {
-      color: deepskyblue;
-    }
-    50% {
-      color: lawngreen;
-    }
-    75% {
-      color: yellow;
-    }
-  } */
-  @media screen and (min-width: 768px) {
-    width: 6rem;
-    bottom: 5rem;
-    ul li {
-      line-height: 2.3rem;
-    }
-    .social-link {
-      font-size: 1.1rem;
-    }
-    span {
-      border-left: 1px solid #fff;
-      height: 11vh;
-      position: absolute;
-      bottom: -5rem;
     }
   }
 `;

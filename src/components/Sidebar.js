@@ -140,7 +140,7 @@ const SidebarWrap = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
     }
     .social-links-wrapper ul {
       display: flex;

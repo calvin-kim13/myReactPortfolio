@@ -3,13 +3,17 @@ import styled from "styled-components";
 import profile from "../assets/profile.png";
 import { Avatar } from "@mui/material";
 import * as FaIcons from "react-icons/fa";
-import * as FiIcons from "react-icons/fi";
 import * as AiIcons from "react-icons/ai";
 import Button from "../components/Button";
+import SideSocialLinks from "../components/SideSocialLinks";
+import background from "../assets/background3.mp4";
 
 const About = () => {
   return (
     <AboutWrapper className="main">
+      <video loop={true} muted={true} autoPlay={true} playsInline={true}>
+        <source src={background} />
+      </video>
       <AboutGreetingWrapper>
         <Avatar
           alt="Calvin Kim"
@@ -20,7 +24,7 @@ const About = () => {
           }}
           className="avatar"
         />
-        <h3>Hello, I'm Calvin</h3>
+        <div className="h3">Hello, I'm Calvin</div>
         <p>
           I am a softare developer who specializes in front end development.
         </p>
@@ -60,7 +64,7 @@ const About = () => {
         </div>
       </AboutGreetingWrapper>
       <AboutTextWrapper>
-        <h3>About Me</h3>
+        <div className="h3">About Me</div>
         <p>
           I am a Full-Stack Developer who is passionate about Front-End
           Development. I love to develop applications with React and have a
@@ -69,54 +73,30 @@ const About = () => {
           bootcamp as I am working towards my Full-Stack Development
           Certificate.
         </p>
-        <Button className="home-btn">CONTACT ME</Button>
+        <Button className="home-btn about-btn">CONTACT ME</Button>
       </AboutTextWrapper>
-      <SocialLinkWrapper>
-        <span></span>
-        <ul>
-          <li>
-            <a
-              href="https://github.com/calvin-kim13"
-              target="_blank"
-              rel="noreferrer"
-              className="social-link"
-            >
-              <FiIcons.FiGithub />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/calvin-kim-143aa51a2/"
-              target="_blank"
-              rel="noreferrer"
-              className="social-link"
-            >
-              <FaIcons.FaLinkedinIn />
-            </a>
-          </li>
-          <li>
-            <a
-              href="../assets/resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="social-link"
-            >
-              <AiIcons.AiOutlineFile />
-            </a>
-          </li>
-        </ul>
-      </SocialLinkWrapper>
+      <SideSocialLinks />
     </AboutWrapper>
   );
 };
 
 const AboutWrapper = styled.div`
-  background-color: #1d1d1d;
-  color: #fff;
+  /* background-color: #1d1d1d; */
+  /* color: #fff; */
   display: flex;
   flex-direction: column;
   align-items: center;
   height: fit-content;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0.9;
+    z-index: -1;
+  }
   @media screen and (min-width: 768px) {
     height: 88vh;
     flex-direction: row;
@@ -141,7 +121,7 @@ const AboutGreetingWrapper = styled.div`
   .avatar {
     margin-top: -7rem;
   }
-  h3 {
+  .h3 {
     text-transform: uppercase;
     font-weight: var(--open-sans-bold);
     font-size: 1.5rem;
@@ -166,13 +146,17 @@ const AboutGreetingWrapper = styled.div`
   .link {
     color: #fff;
     font-size: 1.4rem;
+    opacity: 0.6;
+  }
+  .link:hover {
+    opacity: 1;
   }
   @media screen and (min-width: 768px) {
     margin-top: 0;
     height: 60%;
     width: 17rem;
     justify-content: flex-start;
-    h3 {
+    .h3 {
       margin-top: 1rem;
       text-align: center;
     }
@@ -193,7 +177,7 @@ const AboutTextWrapper = styled.div`
   justify-content: center;
   padding: 2.2rem 1.2rem 5rem;
   font-family: var(--titillium-font);
-  h3 {
+  .h3 {
     font-weight: var(--titillium-black);
     font-size: 2.5rem;
     letter-spacing: 0.1rem;
@@ -205,6 +189,9 @@ const AboutTextWrapper = styled.div`
     color: #979797;
     font-size: 1rem;
     line-height: 1.7rem;
+  }
+  .about-btn {
+    width: 80%;
   }
   @media screen and (min-width: 768px) {
     align-items: flex-start;
@@ -225,66 +212,8 @@ const AboutTextWrapper = styled.div`
       letter-spacing: 0.07rem;
       line-height: 1.8rem;
     }
-  }
-`;
-
-const SocialLinkWrapper = styled.div`
-  height: 10rem;
-  width: 4rem;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-  ul li {
-    list-style: none;
-    line-height: 2.5rem;
-  }
-  .social-link {
-    color: #fff;
-    font-size: 1.3rem;
-    opacity: 0.7;
-  }
-  .social-link:hover {
-    opacity: 1;
-    color: var(--dark-purple);
-    transition: 0.3s ease-in-out all;
-  }
-  /* .icon {
-    text-shadow: 0 0 0.5rem;
-    animation: animate 1s infinite linear;
-  }
-  @keyframes animate {
-    0%,
-    100% {
-      color: deeppink;
-    }
-    25% {
-      color: deepskyblue;
-    }
-    50% {
-      color: lawngreen;
-    }
-    75% {
-      color: yellow;
-    }
-  } */
-  @media screen and (min-width: 768px) {
-    width: 6rem;
-    bottom: 5rem;
-    ul li {
-      line-height: 2.3rem;
-    }
-    .social-link {
-      font-size: 1.1rem;
-    }
-    span {
-      border-left: 1px solid #fff;
-      height: 11vh;
-      position: absolute;
-      bottom: -5rem;
+    .about-btn {
+      width: 100%;
     }
   }
 `;
