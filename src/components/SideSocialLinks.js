@@ -3,6 +3,7 @@ import styled from "styled-components";
 import * as FaIcons from "react-icons/fa";
 import * as FiIcons from "react-icons/fi";
 import * as AiIcons from "react-icons/ai";
+import Pdf from "../assets/resume.pdf";
 
 const SideSocialLinks = () => {
   return (
@@ -31,7 +32,7 @@ const SideSocialLinks = () => {
         </li>
         <li>
           <a
-            href="../assets/resume.pdf"
+            href={Pdf}
             target="_blank"
             rel="noreferrer"
             className="social-link"

@@ -10,6 +10,7 @@ import * as BiIcons from "react-icons/bi";
 import * as RiIcons from "react-icons/ri";
 import { Avatar, Typography } from "@mui/material";
 import profile from "../assets/profile.png";
+import Pdf from "../assets/resume.pdf";
 
 const NavIcon = styled(Link)`
   display: none;
@@ -244,7 +245,7 @@ const Sidebar = () => {
                 </li>
                 <li>
                   <a
-                    href="../assets/resume.pdf"
+                    href={Pdf}
                     target="_blank"
                     rel="noreferrer"
                     className="social-link"

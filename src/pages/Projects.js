@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { data } from "../components/json/ProjectData";
 import SideSocialLinks from "../components/SideSocialLinks";
 import background from "../assets/background3.mp4";
+import PageHeader from "../components/PageHeader";
 
 const Projects = () => {
   return (
@@ -11,9 +12,7 @@ const Projects = () => {
       <video loop={true} muted={true} autoPlay={true} playsInline={true}>
         <source src={background} />
       </video>
-      <div className="h1-wrapper">
-        <h1>My Works</h1>
-      </div>
+      <PageHeader>My Works</PageHeader>
       <div className="cards">
         <ProjectCard
           title={data[0].title}
@@ -51,6 +50,42 @@ const Projects = () => {
           external={data[3].external}
           github={data[3].github}
         />
+        <ProjectCard
+          title={data[3].title}
+          description={data[3].description}
+          usedTech={data[3].usedTech}
+          image={data[3].image}
+          alt={data[3].alt}
+          external={data[3].external}
+          github={data[3].github}
+        />
+        <ProjectCard
+          title={data[3].title}
+          description={data[3].description}
+          usedTech={data[3].usedTech}
+          image={data[3].image}
+          alt={data[3].alt}
+          external={data[3].external}
+          github={data[3].github}
+        />
+        <ProjectCard
+          title={data[3].title}
+          description={data[3].description}
+          usedTech={data[3].usedTech}
+          image={data[3].image}
+          alt={data[3].alt}
+          external={data[3].external}
+          github={data[3].github}
+        />
+        <ProjectCard
+          title={data[3].title}
+          description={data[3].description}
+          usedTech={data[3].usedTech}
+          image={data[3].image}
+          alt={data[3].alt}
+          external={data[3].external}
+          github={data[3].github}
+        />
       </div>
       <div className="side">
         <SideSocialLinks />
@@ -62,6 +97,7 @@ const Projects = () => {
 const ProjectsWrapper = styled.div`
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
+  height: fit-content;
   video {
     object-fit: cover;
     width: 100%;
@@ -70,39 +106,24 @@ const ProjectsWrapper = styled.div`
     opacity: 0.9;
     z-index: -1;
   }
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   .side {
     display: none;
   }
-  .h1-wrapper {
-    padding: 2rem 0 1rem;
-  }
-  h1 {
-    font-family: var(--titillium-font);
-    font-weight: var(--titillium-black);
-    color: #fff;
-  }
   .cards {
     padding-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+    .cards {
+      grid-template-columns: repeat(2, 50%);
+    }
   }
   @media screen and (min-width: 1024px) {
-    flex-direction: row;
-    justify-content: space-evenly;
     height: 100vh;
-    h1 {
-      background-color: var(--dark-purple);
-      width: 15rem;
-      height: 9rem;
-      padding: 2rem;
-      font-size: 4rem;
-    }
     .cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(4, 25%);
       padding-bottom: 0;
     }
   }

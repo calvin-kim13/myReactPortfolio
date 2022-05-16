@@ -1,10 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import background from "../assets/background3.mp4";
 import Button from "../components/Button";
+import CodeSnippet from "../components/CodeSnippet";
 import SideSocialLinks from "../components/SideSocialLinks";
 
 const Home = () => {
+  let navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <HomeWrapper className="main">
       {/* <video src={background} autoPlay loop muted playsInline></video> */}
@@ -16,59 +24,12 @@ const Home = () => {
         <div className="h3 animation">Calvin Kim</div>
         <div className="h5">Software Developer</div>
         <div className="h6">Passion in the Front-End</div>
-        <Button className="home-btn">Contact me</Button>
+        <Button className="home-btn" onClick={handleClick}>
+          Contact me
+        </Button>
       </WelcomeWrapper>
       <SideSocialLinks />
-      <DependencyWrapper>
-        <pre>
-          <pre>&#123;</pre>
-          <em className="parent">"name"</em> {""} :
-          <em className="children"> "portfolio"</em>
-          , <br />
-          <em className="parent">"version"</em> {""} :
-          <em className="children"> "2.0.0"</em>
-          , <br />
-          <em className="parent">"owner"</em> {""} :
-          <em className="children"> "Calvin Kim"</em>
-          , <br />
-          <em className="parent">"email"</em> {""} :
-          <em className="children"> "calvinkim1230@gmail.com"</em>
-          , <br />
-          <em className="parent">"phone"</em> {""} :
-          <em className="children"> "(714) 477-3232"</em>
-          , <br />
-          <em className="parent">"description"</em> {""} :
-          <em className="children"> "Full-Stack Developer"</em>
-          , <br />
-          <em className="parent">"repository"</em> {""} :
-          <em className="children"> "github.com/calvin-kim13"</em>
-          , <br />
-          <em className="parent">"engines"</em> {""} : {""} [ <br />
-          <em className="nested-children"> "javascript"</em>, <br />
-          <em className="nested-children"> "css"</em>, <br />
-          <em className="nested-children"> "html"</em>, <br />
-          <em className="nested-children"> "nodejs"</em>, <br />
-          <em className="nested-children"> "graphql"</em>, <br />
-          <em className="nested-children"> "mongodb"</em>, <br />
-          <pre className="closing-braces">] ,</pre>
-          <em className="parent">"dependencies"</em> {""} : {""} [ <br />
-          <em className="nested-children"> "react"</em>, <br />
-          <em className="nested-children"> "styled-components"</em>, <br />
-          <em className="nested-children"> "express"</em>, <br />
-          <em className="nested-children"> "flexbox"</em>, <br />
-          <pre className="closing-braces">] ,</pre>
-          <em className="parent">"devDependencies"</em> {""} : {""} &#123;{" "}
-          <br />
-          <em className="nested-children"> "music"</em> {""} :
-          <em className="children"> true</em>, <br />
-          <em className="nested-children"> "monitors"</em> {""} :
-          <em className="children">"^2"</em>, <br />
-          <em className="nested-children"> "mode"</em> {""} :
-          <em className="children"> "dark"</em>, <br />
-          <pre className="closing-braces"> &#125; ,</pre>
-          <pre>&#125;</pre>
-        </pre>
-      </DependencyWrapper>
+      <CodeSnippet />
     </HomeWrapper>
   );
 };
@@ -115,12 +76,13 @@ const WelcomeWrapper = styled.div`
   font-family: var(--titillium-font);
   padding: 2rem 3rem;
   .h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: var(--titillium-regular);
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.25rem;
+    opacity: 0.8;
   }
   .h3 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     font-weight: var(--titillium-black);
     letter-spacing: 0.4rem;
   }
@@ -167,41 +129,6 @@ const WelcomeWrapper = styled.div`
       margin-top: -0.6rem;
     }
     .h6 {
-      font-size: 0.8rem;
-    }
-  }
-`;
-
-const DependencyWrapper = styled.div`
-  display: none;
-  @media screen and (min-width: 1024px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    pre {
-      font-family: var(--source-code-font);
-      font-size: 0.7rem;
-      line-height: 1.2rem;
-    }
-    pre .parent {
-      color: #fd6767be;
-      margin-left: 0.8rem;
-    }
-    pre .children {
-      margin-left: 0.4rem;
-      color: #71c05f;
-    }
-    pre .nested-children {
-      margin-left: 2rem;
-      color: #71c05f;
-    }
-    pre .closing-braces {
-      margin-left: 0.9rem;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    pre {
       font-size: 0.8rem;
     }
   }

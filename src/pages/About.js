@@ -3,92 +3,98 @@ import styled from "styled-components";
 import profile from "../assets/profile.png";
 import { Avatar } from "@mui/material";
 import * as FaIcons from "react-icons/fa";
+import * as FiIcons from "react-icons/fi";
 import * as AiIcons from "react-icons/ai";
 import Button from "../components/Button";
 import SideSocialLinks from "../components/SideSocialLinks";
 import background from "../assets/background3.mp4";
+import PageHeader from "../components/PageHeader";
+import { useNavigate } from "react-router-dom";
+import Pdf from "../assets/resume.pdf";
 
 const About = () => {
+  let navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <AboutWrapper className="main">
       <video loop={true} muted={true} autoPlay={true} playsInline={true}>
         <source src={background} />
       </video>
-      <AboutGreetingWrapper>
-        <Avatar
-          alt="Calvin Kim"
-          src={profile}
-          sx={{
-            width: 200,
-            height: 200,
-          }}
-          className="avatar"
-        />
-        <div className="h3">Hello, I'm Calvin</div>
-        <p>
-          I am a softare developer who specializes in front end development.
-        </p>
-        <div className="social-link-wrapper">
-          <ul>
-            <li>
-              <a
-                href="https://github.com/calvin-kim13"
-                target="_blank"
-                rel="noreferrer"
-                className="link"
-              >
-                <FaIcons.FaGithub />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/calvin-kim-143aa51a2/"
-                target="_blank"
-                rel="noreferrer"
-                className="link"
-              >
-                <FaIcons.FaLinkedinIn />
-              </a>
-            </li>
-            <li>
-              <a
-                href="../assets/resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="link"
-              >
-                <AiIcons.AiFillFilePdf />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </AboutGreetingWrapper>
-      <AboutTextWrapper>
-        <div className="h3">About Me</div>
-        <p>
-          I am a Full-Stack Developer who is passionate about Front-End
-          Development. I love to develop applications with React and have a
-          strong ability to work with API's thorugh GraphQL. <br />
-          <br />I am currently a student at the University of California, Irvine
-          bootcamp as I am working towards my Full-Stack Development
-          Certificate.
-        </p>
-        <Button className="home-btn about-btn">CONTACT ME</Button>
-      </AboutTextWrapper>
+      <PageHeader>Who am I?</PageHeader>
+      <div className="about-content-wrapper">
+        <AboutGreetingWrapper>
+          <Avatar
+            alt="Calvin Kim"
+            src={profile}
+            sx={{
+              width: 200,
+              height: 200,
+            }}
+            className="avatar"
+          />
+          <div className="h3">Hello, I'm Calvin</div>
+          <p>
+            I am a softare developer who specializes in front end development.
+          </p>
+          <div className="social-link-wrapper">
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/calvin-kim13"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link"
+                >
+                  <FiIcons.FiGithub />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/calvin-kim-143aa51a2/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link"
+                >
+                  <FaIcons.FaLinkedinIn />
+                </a>
+              </li>
+              <li>
+                <a href={Pdf} target="_blank" rel="noreferrer" className="link">
+                  <AiIcons.AiOutlineFile />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </AboutGreetingWrapper>
+        <AboutTextWrapper>
+          <div className="h3">About Me</div>
+          <p>
+            I am a Full-Stack Developer who is passionate about Front-End
+            Development. I love to develop applications with React and have a
+            strong ability to work with API's thorugh GraphQL. <br />
+            <br />I am currently a student at the University of California,
+            Irvine bootcamp as I am working towards my Full-Stack Development
+            Certificate.
+          </p>
+          <Button className="home-btn about-btn" onClick={handleClick}>
+            CONTACT ME
+          </Button>
+        </AboutTextWrapper>
+      </div>
       <SideSocialLinks />
     </AboutWrapper>
   );
 };
 
 const AboutWrapper = styled.div`
-  /* background-color: #1d1d1d; */
-  /* color: #fff; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: fit-content;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
+  height: fit-content;
+
   video {
     object-fit: cover;
     width: 100%;
@@ -97,10 +103,20 @@ const AboutWrapper = styled.div`
     opacity: 0.9;
     z-index: -1;
   }
+  .about-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   @media screen and (min-width: 768px) {
     height: 88vh;
-    flex-direction: row;
-    justify-content: center;
+    .about-content-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 2rem;
+    }
   }
   @media screen and (min-width: 1024px) {
     height: 100vh;
@@ -144,12 +160,20 @@ const AboutGreetingWrapper = styled.div`
     list-style: none;
   }
   .link {
-    color: #fff;
-    font-size: 1.4rem;
-    opacity: 0.6;
-  }
-  .link:hover {
-    opacity: 1;
+    font-size: 1.2rem;
+    margin: 0 0.3rem;
+    color: #2e313c;
+    border-radius: 50%;
+    background: #fff;
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: 0.3s ease-in-out all;
+    &:hover {
+      opacity: 1;
+    }
   }
   @media screen and (min-width: 768px) {
     margin-top: 0;
