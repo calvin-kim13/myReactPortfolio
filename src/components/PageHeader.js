@@ -13,7 +13,7 @@ const HeaderWrapper = styled.div`
   padding: 2rem 0 0 1rem;
   font-family: var(--titillium-font);
   .header {
-    font-weight: var(--titillium-bold);
+    font-weight: var(--titillium-black);
     color: var(--grey);
     font-size: 2.7rem;
   }

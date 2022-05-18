@@ -5,6 +5,8 @@ import background from "../assets/background3.mp4";
 import Button from "../components/Button";
 import CodeSnippet from "../components/CodeSnippet";
 import SideSocialLinks from "../components/SideSocialLinks";
+import Zoom from "react-reveal/Zoom";
+import Flip from "react-reveal/Flip";
 
 const Home = () => {
   let navigate = useNavigate();
@@ -19,17 +21,21 @@ const Home = () => {
       <video loop={true} muted={true} autoPlay={true} playsInline={true}>
         <source src={background} />
       </video>
-      <WelcomeWrapper>
-        <div className="h2">Hi, I'm</div>
-        <div className="h3 animation">Calvin Kim</div>
-        <div className="h5">Software Developer</div>
-        <div className="h6">Passion in the Front-End</div>
-        <Button className="home-btn" onClick={handleClick}>
-          Contact me
-        </Button>
-      </WelcomeWrapper>
+      <Flip>
+        <WelcomeWrapper>
+          <div className="h2">Hi, I'm</div>
+          <div className="h3 animation">Calvin Kim</div>
+          <div className="h5">Software Developer</div>
+          <div className="h6">Passion in the Front-End</div>
+          <Button className="home-btn" onClick={handleClick}>
+            Contact me
+          </Button>
+        </WelcomeWrapper>
+      </Flip>
       <SideSocialLinks />
-      <CodeSnippet />
+      <Zoom>
+        <CodeSnippet />
+      </Zoom>
     </HomeWrapper>
   );
 };

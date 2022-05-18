@@ -63,11 +63,11 @@ const SocialLinkWrapper = styled.div`
     color: #fff;
     font-size: 1.3rem;
     opacity: 0.7;
+    transition: 0.2s ease-in-out all;
   }
   .social-link:hover {
     opacity: 1;
     color: var(--dark-purple);
-    transition: 0.3s ease-in-out all;
   }
   @media screen and (min-width: 768px) {
     width: 6rem;

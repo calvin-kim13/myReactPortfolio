@@ -5,6 +5,7 @@ import Form from "../components/Form";
 import ContactInfo from "../components/ContactInfo";
 import PageHeader from "../components/PageHeader";
 import Map from "../components/Map";
+import Zoom from "react-reveal/Zoom";
 
 const Contact = () => {
   return (
@@ -14,9 +15,15 @@ const Contact = () => {
       </video>
       <div className="contact-page-wrapper">
         <div className="left-container">
-          <PageHeader>Contact Me</PageHeader>
-          <Form />
-          <ContactInfo />
+          <Zoom>
+            <PageHeader>Contact Me</PageHeader>
+          </Zoom>
+          <Zoom>
+            <Form />
+          </Zoom>
+          <Zoom>
+            <ContactInfo />
+          </Zoom>
         </div>
         <div className="map-wrapper">
           <Map />

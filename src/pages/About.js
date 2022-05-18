@@ -11,6 +11,7 @@ import background from "../assets/background3.mp4";
 import PageHeader from "../components/PageHeader";
 import { useNavigate } from "react-router-dom";
 import Pdf from "../assets/resume.pdf";
+import Zoom from "react-reveal/Zoom";
 
 const About = () => {
   let navigate = useNavigate();
@@ -24,67 +25,80 @@ const About = () => {
       <video loop={true} muted={true} autoPlay={true} playsInline={true}>
         <source src={background} />
       </video>
-      <PageHeader>Who am I?</PageHeader>
-      <div className="about-content-wrapper">
-        <AboutGreetingWrapper>
-          <Avatar
-            alt="Calvin Kim"
-            src={profile}
-            sx={{
-              width: 200,
-              height: 200,
-            }}
-            className="avatar"
-          />
-          <div className="h3">Hello, I'm Calvin</div>
-          <p>
-            I am a softare developer who specializes in front end development.
-          </p>
-          <div className="social-link-wrapper">
-            <ul>
-              <li>
-                <a
-                  href="https://github.com/calvin-kim13"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="link"
-                >
-                  <FiIcons.FiGithub />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/calvin-kim-143aa51a2/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="link"
-                >
-                  <FaIcons.FaLinkedinIn />
-                </a>
-              </li>
-              <li>
-                <a href={Pdf} target="_blank" rel="noreferrer" className="link">
-                  <AiIcons.AiOutlineFile />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </AboutGreetingWrapper>
-        <AboutTextWrapper>
-          <div className="h3">About Me</div>
-          <p>
-            I am a Full-Stack Developer who is passionate about Front-End
-            Development. I love to develop applications with React and have a
-            strong ability to work with API's thorugh GraphQL. <br />
-            <br />I am currently a student at the University of California,
-            Irvine bootcamp as I am working towards my Full-Stack Development
-            Certificate.
-          </p>
-          <Button className="home-btn about-btn" onClick={handleClick}>
-            CONTACT ME
-          </Button>
-        </AboutTextWrapper>
-      </div>
+      <Zoom>
+        <PageHeader>Who am I?</PageHeader>
+      </Zoom>
+      <Zoom>
+        <div className="about-content-wrapper">
+          <AboutGreetingWrapper>
+            <Avatar
+              alt="Calvin Kim"
+              src={profile}
+              sx={{
+                width: 200,
+                height: 200,
+              }}
+              className="avatar"
+            />
+            <div className="h3">I'm Calvin...</div>
+            <p>
+              I am a softare developer who specializes in front end development.
+            </p>
+            <div className="social-link-wrapper">
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/calvin-kim13"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    <FiIcons.FiGithub />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/calvin-kim-143aa51a2/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    <FaIcons.FaLinkedinIn />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={Pdf}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    <AiIcons.AiOutlineFile />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </AboutGreetingWrapper>
+          <AboutTextWrapper>
+            <Zoom>
+              <div className="h3">About Me</div>
+            </Zoom>
+            <Zoom>
+              <p>
+                I am a Full-Stack Developer who is passionate about Front-End
+                Development. I love to develop applications with React and have
+                a strong ability to work with API's thorugh GraphQL. <br />
+                <br />I am currently a student at the University of California,
+                Irvine bootcamp as I am working towards my Full-Stack
+                Development Certificate.
+              </p>
+            </Zoom>
+            <Button className="home-btn about-btn" onClick={handleClick}>
+              CONTACT ME
+            </Button>
+          </AboutTextWrapper>
+        </div>
+      </Zoom>
       <SideSocialLinks />
     </AboutWrapper>
   );

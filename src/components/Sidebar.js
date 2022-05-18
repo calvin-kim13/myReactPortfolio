@@ -15,14 +15,13 @@ import Pdf from "../assets/resume.pdf";
 const NavIcon = styled(Link)`
   display: none;
   @media screen and (min-width: 1024px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex;
     justify-content: flex-end;
-    padding: 1rem 1.2rem;
+    padding: 1rem 1.4rem;
     width: 100%;
     .arrows {
       color: var(--grey);
-      opacity: 0.7;
     }
   }
 `;
@@ -96,7 +95,7 @@ const SidebarNav = styled.nav`
       display: flex;
       justify-content: space-between;
       color: #e1e9fc;
-      padding: 30px;
+      padding: 27px;
       height: 80px;
       width: 100%;
       font-size: 1rem;
@@ -170,7 +169,7 @@ const SidebarWrap = styled.div`
 `;
 
 const Sidebar = () => {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
 
   const showSidebar = () => setSidebar(!sidebar);
 
