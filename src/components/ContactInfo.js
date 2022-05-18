@@ -80,7 +80,7 @@ const ContactInfoWrapper = styled.div`
   h3 {
     margin-top: 2rem;
     font-size: 1.4rem;
-    color: #fff;
+    color: var(--grey);
     font-weight: var(--titillium-bold);
   }
   .social-links-container {

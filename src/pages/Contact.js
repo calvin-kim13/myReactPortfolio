@@ -48,12 +48,11 @@ const ContactWrapper = styled.div`
   .contact-page-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    height: 100vh;
+    height: fit-content;
   }
   .left-container {
     height: 100%;
     @media screen and (min-width: 1024px) {
-      border: 4px solid var(--dark-purple);
       display: flex;
       flex-direction: column;
       justify-content: flex-start;

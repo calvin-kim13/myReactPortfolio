@@ -18,7 +18,7 @@ const NavIcon = styled(Link)`
     font-size: 1.5rem;
     display: flex;
     justify-content: flex-end;
-    padding: 1rem 1.4rem;
+    padding: 1.5rem 1.5rem;
     width: 100%;
     .arrows {
       color: var(--grey);
@@ -136,7 +136,7 @@ const SidebarWrap = styled.div`
   }
   @media screen and (min-width: 1024px) {
     .image-social-wrapper {
-      display: flex;
+      ${({ sidebar }) => (sidebar ? `display: flex;` : `display: none;`)}
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -169,7 +169,7 @@ const SidebarWrap = styled.div`
 `;
 
 const Sidebar = () => {
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -178,7 +178,7 @@ const Sidebar = () => {
   return (
     <>
       <SidebarNav sidebar={sidebar}>
-        <SidebarWrap>
+        <SidebarWrap sidebar={sidebar}>
           <NavIcon to="#">
             {sidebar ? (
               <IoIcons.IoIosArrowDropleft

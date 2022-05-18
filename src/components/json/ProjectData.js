@@ -7,7 +7,7 @@ export const data = [
   {
     title: "Victory Taekwondo",
     description:
-      "Freelance work for Victory Taekwondo, a martial arts school. Includes information regarding company operations, news, offers, and ways to sign up.",
+      "Freelance work for Victory TKD, a martial arts school. Includes information regarding company operations, news, offers, and ways to sign up.",
     usedTech: "React - MUI - Ant Design - Styled Components",
     image: tkd,
     alt: "Victory TKD",
