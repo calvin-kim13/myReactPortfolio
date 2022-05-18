@@ -4,6 +4,7 @@ import * as FaIcons from "react-icons/fa";
 import * as FiIcons from "react-icons/fi";
 import * as AiIcons from "react-icons/ai";
 import Pdf from "../assets/resume.pdf";
+import { Tooltip } from "antd";
 
 const SideSocialLinks = () => {
   return (
@@ -11,34 +12,40 @@ const SideSocialLinks = () => {
       <span></span>
       <ul>
         <li>
-          <a
-            href="https://github.com/calvin-kim13"
-            target="_blank"
-            rel="noreferrer"
-            className="social-link"
-          >
-            <FiIcons.FiGithub />
-          </a>
+          <Tooltip placement="left" title="GitHub">
+            <a
+              href="https://github.com/calvin-kim13"
+              target="_blank"
+              rel="noreferrer"
+              className="social-link"
+            >
+              <FiIcons.FiGithub />
+            </a>
+          </Tooltip>
+        </li>{" "}
+        <li>
+          <Tooltip placement="left" title="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/calvin-kim-143aa51a2/"
+              target="_blank"
+              rel="noreferrer"
+              className="social-link"
+            >
+              <FaIcons.FaLinkedinIn />
+            </a>
+          </Tooltip>
         </li>
         <li>
-          <a
-            href="https://www.linkedin.com/in/calvin-kim-143aa51a2/"
-            target="_blank"
-            rel="noreferrer"
-            className="social-link"
-          >
-            <FaIcons.FaLinkedinIn />
-          </a>
-        </li>
-        <li>
-          <a
-            href={Pdf}
-            target="_blank"
-            rel="noreferrer"
-            className="social-link"
-          >
-            <AiIcons.AiOutlineFile />
-          </a>
+          <Tooltip placement="left" title="Resumé">
+            <a
+              href={Pdf}
+              target="_blank"
+              rel="noreferrer"
+              className="social-link"
+            >
+              <AiIcons.AiOutlineFile />
+            </a>
+          </Tooltip>
         </li>
       </ul>
     </SocialLinkWrapper>
