@@ -134,6 +134,9 @@ const AboutWrapper = styled.div`
   }
   @media screen and (min-width: 1024px) {
     height: 100vh;
+    .about-content-wrapper {
+      margin-top: 3rem;
+    }
   }
   @media screen and (min-width: 1700px) {
     .about-content-wrapper {

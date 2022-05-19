@@ -49,7 +49,7 @@ const CardWrapper = styled.div`
   margin: 0 auto;
   padding: 20px 30px;
   position: relative;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 255, 255, 0.2);
   transition: 0.5s;
   font-family: var(--titillium-font);
   display: flex;
