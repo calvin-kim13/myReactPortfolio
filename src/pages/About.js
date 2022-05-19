@@ -123,7 +123,6 @@ const AboutWrapper = styled.div`
     align-items: center;
   }
   @media screen and (min-width: 768px) {
-    height: 88vh;
     .about-content-wrapper {
       display: flex;
       justify-content: center;
@@ -190,7 +189,7 @@ const AboutGreetingWrapper = styled.div`
     }
   }
   @media screen and (min-width: 768px) {
-    margin-top: 0;
+    margin-top: 2rem;
     height: 60%;
     width: 17rem;
     justify-content: flex-start;
@@ -205,27 +204,31 @@ const AboutGreetingWrapper = styled.div`
       margin-top: 2.2rem;
     }
   }
+  @media screen and (min-width: 1600px) {
+    // margin-top: 9rem;
+  }
 `;
 
 const AboutTextWrapper = styled.div`
-  width: 18rem;
+  width: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2.2rem 1.2rem 5rem;
+  padding: 2rem;
   font-family: var(--titillium-font);
   .h3 {
     font-weight: var(--titillium-black);
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     letter-spacing: 0.1rem;
+    color: var(--grey);
   }
   p {
-    margin-top: 1rem;
+    margin-top: 0.6rem;
     text-align: center;
     font-weight: var(--titillium-light);
     color: #979797;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.7rem;
   }
   .about-btn {
@@ -242,16 +245,16 @@ const AboutTextWrapper = styled.div`
   @media screen and (min-width: 1200px) {
     width: 28rem;
     h3 {
-      font-size: 3rem;
+      font-size: 2.8rem;
     }
     p {
       text-align: left;
-      font-size: 1.2rem;
+      font-size: 1rem;
       letter-spacing: 0.07rem;
-      line-height: 1.8rem;
+      line-height: 1.6rem;
     }
     .about-btn {
-      width: 100%;
+      width: 90%;
     }
   }
 `;

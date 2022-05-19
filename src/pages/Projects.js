@@ -2,7 +2,6 @@ import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import styled from "styled-components";
 import { data } from "../components/json/ProjectData";
-import SideSocialLinks from "../components/SideSocialLinks";
 import background from "../assets/background3.mp4";
 import PageHeader from "../components/PageHeader";
 import Zoom from "react-reveal/Zoom";
@@ -92,9 +91,6 @@ const Projects = () => {
           />
         </Zoom>
       </div>
-      <div className="side">
-        <SideSocialLinks />
-      </div>
     </ProjectsWrapper>
   );
 };
@@ -111,30 +107,16 @@ const ProjectsWrapper = styled.div`
     opacity: 0.9;
     z-index: -1;
   }
-  .side {
-    display: none;
-  }
   .cards {
-    padding-bottom: 3rem;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 50%);
     align-items: center;
   }
-  @media screen and (min-width: 768px) {
-    .cards {
-      grid-template-columns: repeat(2, 50%);
-    }
-  }
+
   @media screen and (min-width: 1024px) {
     height: 100vh;
     .cards {
       grid-template-columns: repeat(4, 25%);
-      padding-bottom: 0;
-    }
-  }
-  @media screen and (min-width: 1120px) {
-    .side {
-      display: block;
     }
   }
 `;

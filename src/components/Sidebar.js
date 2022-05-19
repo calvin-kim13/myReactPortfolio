@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
-import * as IoIcons from "react-icons/io";
 import * as FaIcons from "react-icons/fa";
 import * as FiIcons from "react-icons/fi";
 import * as AiIcons from "react-icons/ai";
@@ -11,6 +10,7 @@ import * as RiIcons from "react-icons/ri";
 import { Avatar, Typography } from "@mui/material";
 import profile from "../assets/profile.png";
 import Pdf from "../assets/resume.pdf";
+import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 
 const NavIcon = styled(Link)`
   display: none;
@@ -18,7 +18,7 @@ const NavIcon = styled(Link)`
     font-size: 1.5rem;
     display: flex;
     justify-content: flex-end;
-    padding: 1rem 1.4rem;
+    padding: 1.5rem 1.5rem;
     width: 100%;
     .arrows {
       color: var(--grey);
@@ -136,7 +136,7 @@ const SidebarWrap = styled.div`
   }
   @media screen and (min-width: 1024px) {
     .image-social-wrapper {
-      display: flex;
+      ${({ sidebar }) => (sidebar ? `display: flex;` : `display: none;`)}
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -169,7 +169,7 @@ const SidebarWrap = styled.div`
 `;
 
 const Sidebar = () => {
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -178,18 +178,12 @@ const Sidebar = () => {
   return (
     <>
       <SidebarNav sidebar={sidebar}>
-        <SidebarWrap>
+        <SidebarWrap sidebar={sidebar}>
           <NavIcon to="#">
             {sidebar ? (
-              <IoIcons.IoIosArrowDropleft
-                onClick={showSidebar}
-                className="arrows"
-              />
+              <MenuFoldOutlined onClick={showSidebar} className="arrows" />
             ) : (
-              <IoIcons.IoIosArrowDropright
-                onClick={showSidebar}
-                className="arrows"
-              />
+              <MenuUnfoldOutlined onClick={showSidebar} className="arrows" />
             )}
           </NavIcon>
           <div className="image-social-wrapper">

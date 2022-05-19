@@ -28,7 +28,7 @@ const Form = () => {
         <textarea
           name="message"
           placeholder="Message"
-          rows="7"
+          rows="4"
           className="input"
           required
         />
@@ -47,14 +47,14 @@ const FormWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 0 1rem 1rem;
   }
   .input {
     width: 100%;
     margin-bottom: 0.6rem;
     border-style: none;
     background-color: #2e313c;
-    padding: 0.8rem 1rem;
+    padding: 0.6rem 1rem;
     transition: all 0.4s;
     font-family: var(--titillium-font);
     letter-spacing: 0.2rem;
@@ -69,7 +69,7 @@ const FormWrapper = styled.div`
   }
   .btn-wrapper {
     width: 100%;
-    margin-top: -1.2rem;
+    margin-top: -1.9rem;
   }
   .contact-btn {
     width: 60%;
