@@ -9,7 +9,7 @@ const Form = () => {
         action="https://formsubmit.co/calvinkim1230@gmail.com"
         method="POST"
       >
-        <input type="hidden" name="_subject" value="Taekwondo website form" />
+        <input type="hidden" name="_subject" value="Portfolio Form" />
         {/* <input type="hidden" name="_next" value="https://localhost3000/thanks" /> */}
         <input
           type="text"
