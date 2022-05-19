@@ -17,7 +17,7 @@ export const data = [
   {
     title: "Bug Tracker",
     description:
-      "Project that forces users to register or login. Users are then able to add projects to their dashbaords, add bugs to the project, and add contributors to the project who are also allowed to add bugs.",
+      "Project that forces users to register or login. Users are able to add projects to their dashbaords, add bugs to the project, and add contributors to the project who are also allowed to add bugs.",
     usedTech: "Express - MySQL - Sequelize - Handlebars",
     image: bug,
     alt: "Bug Tracker",

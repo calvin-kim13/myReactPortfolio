@@ -36,7 +36,7 @@ const Contact = () => {
 const ContactWrapper = styled.div`
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
-  height: fit-content;
+  height: 88vh;
   video {
     object-fit: cover;
     width: 100%;
@@ -61,6 +61,9 @@ const ContactWrapper = styled.div`
   /* .map-wrapper {
     display: none;
   } */
+  @media screen and (min-width: 768px) {
+    height: 88vh;
+  }
   @media screen and (min-width: 1024px) {
     height: 100vh;
     .contact-page-wrapper {

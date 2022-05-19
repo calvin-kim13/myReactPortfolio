@@ -123,6 +123,7 @@ const AboutWrapper = styled.div`
     align-items: center;
   }
   @media screen and (min-width: 768px) {
+    height: 88vh;
     .about-content-wrapper {
       display: flex;
       justify-content: center;
@@ -133,6 +134,11 @@ const AboutWrapper = styled.div`
   }
   @media screen and (min-width: 1024px) {
     height: 100vh;
+  }
+  @media screen and (min-width: 1700px) {
+    .about-content-wrapper {
+      margin-top: 5rem;
+    }
   }
 `;
 
@@ -236,7 +242,7 @@ const AboutTextWrapper = styled.div`
   }
   @media screen and (min-width: 768px) {
     align-items: flex-start;
-    width: 22rem;
+    width: 25rem;
     margin-left: 2rem;
     p {
       text-align: left;

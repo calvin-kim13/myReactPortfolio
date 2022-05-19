@@ -28,7 +28,7 @@ const Form = () => {
         <textarea
           name="message"
           placeholder="Message"
-          rows="4"
+          rows="6"
           className="input"
           required
         />
@@ -89,17 +89,17 @@ const FormWrapper = styled.div`
     form {
       align-items: center;
     }
-    .input {
-      width: 90%;
-    }
+
     .btn-wrapper {
       width: 90%;
     }
     .contact-btn {
       width: 50%;
     }
-  }
-  @media screen and (min-width: 1024px) {
+    .input {
+      padding: 0.8rem 1rem;
+      width: 90%;
+    }
     .contact-btn {
       width: 50%;
       height: 3rem;
@@ -107,6 +107,11 @@ const FormWrapper = styled.div`
     }
     .contact-btn span {
       top: -11px;
+    }
+  }
+  @media screen and (min-width: 1700px) {
+    .input {
+      padding: 1rem 1rem;
     }
   }
 `;

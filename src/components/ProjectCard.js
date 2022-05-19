@@ -83,7 +83,7 @@ const CardWrapper = styled.div`
     left: 0;
   }
   .title {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     letter-spacing: 0.1rem;
     font-weight: var(--titillium-bold);
     display: none;
