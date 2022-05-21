@@ -65,13 +65,13 @@ const ContactWrapper = styled.div`
     height: fit-content;
   }
   @media screen and (min-width: 1024px) {
-    height: 100vh;
+    // height: 100vh;
     .contact-page-wrapper {
       grid-template-columns: repeat(2, 50%);
     }
     .map-wrapper {
       display: grid;
-      height: 100vh;
+      height: 100%;
     }
   }
 `;

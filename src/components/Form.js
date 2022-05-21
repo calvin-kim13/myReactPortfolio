@@ -97,7 +97,7 @@ const FormWrapper = styled.div`
       width: 50%;
     }
     .input {
-      padding: 0.8rem 1rem;
+      padding: 0.6rem 1rem;
       width: 90%;
     }
     .contact-btn {
