@@ -36,7 +36,7 @@ const SideSocialLinks = () => {
           </Tooltip>
         </li>
         <li>
-          <Tooltip placement="left" title="Resumé">
+          <Tooltip placement="left" title="Resume">
             <a
               href={Pdf}
               target="_blank"

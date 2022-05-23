@@ -61,7 +61,7 @@ const ContactInfo = () => {
 };
 
 const ContactInfoWrapper = styled.div`
-  margin-top: 1rem;
+  // margin-top: 1rem;
   padding: 1rem;
   font-family: var(--titillium-font);
   .item {
@@ -78,7 +78,7 @@ const ContactInfoWrapper = styled.div`
     letter-spacing: 0.1rem;
   }
   h3 {
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 1.4rem;
     color: var(--grey);
     font-weight: var(--titillium-bold);
