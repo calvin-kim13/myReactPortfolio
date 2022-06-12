@@ -5,7 +5,7 @@ import background from "../assets/background3.mp4";
 import Button from "../components/Button";
 import CodeSnippet from "../components/CodeSnippet";
 import SideSocialLinks from "../components/SideSocialLinks";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
   let navigate = useNavigate();
@@ -20,7 +20,7 @@ const Home = () => {
       <video loop={true} muted={true} autoPlay={true} playsInline={true}>
         <source src={background} />
       </video>
-      <Fade up>
+      <Fade direction="up">
         <WelcomeWrapper>
           <div className="h2">Hi, I'm</div>
           <div className="h3 animation">Calvin Kim</div>
@@ -32,7 +32,7 @@ const Home = () => {
         </WelcomeWrapper>
       </Fade>
       <SideSocialLinks />
-      <Fade>
+      <Fade delay={400}>
         <CodeSnippet />
       </Fade>
     </HomeWrapper>

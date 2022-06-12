@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { data } from "../components/json/ProjectData";
 import background from "../assets/background3.mp4";
 import PageHeader from "../components/PageHeader";
-import Zoom from "react-reveal/Zoom";
+import { Fade } from "react-awesome-reveal";
 
 const Projects = () => {
   return (
@@ -12,11 +12,11 @@ const Projects = () => {
       <video loop={true} muted={true} autoPlay={true} playsInline={true}>
         <source src={background} />
       </video>
-      <Zoom>
+      <Fade>
         <PageHeader>My Works</PageHeader>
-      </Zoom>
+      </Fade>
       <div className="cards">
-        <Zoom>
+        <Fade direction="up">
           <ProjectCard
             title={data[0].title}
             description={data[0].description}
@@ -71,7 +71,7 @@ const Projects = () => {
             external={data[5].external}
             github={data[5].github}
           />
-        </Zoom>
+        </Fade>
       </div>
     </ProjectsWrapper>
   );

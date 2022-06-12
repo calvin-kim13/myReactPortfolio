@@ -11,7 +11,8 @@ import background from "../assets/background3.mp4";
 import PageHeader from "../components/PageHeader";
 import { useNavigate } from "react-router-dom";
 import Pdf from "../assets/resume.pdf";
-import Zoom from "react-reveal/Zoom";
+// import Zoom from "react-reveal/Zoom";
+import { Fade } from "react-awesome-reveal";
 
 const About = () => {
   let navigate = useNavigate();
@@ -25,10 +26,10 @@ const About = () => {
       <video loop={true} muted={true} autoPlay={true} playsInline={true}>
         <source src={background} />
       </video>
-      <Zoom>
+      <Fade>
         <PageHeader>Who am I?</PageHeader>
-      </Zoom>
-      <Zoom>
+      </Fade>
+      <Fade direction="up">
         <div className="about-content-wrapper">
           <AboutGreetingWrapper>
             <Avatar
@@ -82,10 +83,10 @@ const About = () => {
             </div>
           </AboutGreetingWrapper>
           <AboutTextWrapper>
-            <Zoom>
+            <Fade direction="up">
               <div className="h3">About Me</div>
-            </Zoom>
-            <Zoom>
+            </Fade>
+            <Fade direction="up">
               <p>
                 I am a Full-Stack Developer who is passionate about Front-End
                 Development. I love to develop applications with React and
@@ -95,13 +96,13 @@ const About = () => {
                 attention to detail, I am result-oriented, and I am always
                 willing to learn new things,
               </p>
-            </Zoom>
+            </Fade>
             <Button className="home-btn about-btn" onClick={handleClick}>
               CONTACT ME
             </Button>
           </AboutTextWrapper>
         </div>
-      </Zoom>
+      </Fade>
       <SideSocialLinks />
     </AboutWrapper>
   );

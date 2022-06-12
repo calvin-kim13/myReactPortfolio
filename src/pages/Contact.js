@@ -5,7 +5,7 @@ import Form from "../components/Form";
 import ContactInfo from "../components/ContactInfo";
 import PageHeader from "../components/PageHeader";
 import Map from "../components/Map";
-import Zoom from "react-reveal/Zoom";
+import { Fade } from "react-awesome-reveal";
 
 const Contact = () => {
   return (
@@ -15,15 +15,15 @@ const Contact = () => {
       </video>
       <div className="contact-page-wrapper">
         <div className="left-container">
-          <Zoom>
+          <Fade>
             <PageHeader>Contact Me</PageHeader>
-          </Zoom>
-          <Zoom>
+          </Fade>
+          <Fade direction="up">
             <Form />
-          </Zoom>
-          <Zoom>
+          </Fade>
+          <Fade delay={500}>
             <ContactInfo />
-          </Zoom>
+          </Fade>
         </div>
         <div className="map-wrapper">
           <Map />
