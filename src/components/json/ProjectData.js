@@ -1,6 +1,8 @@
-import tkd from "../../assets/tkd.svg";
-import bug from "../../assets/bug.svg";
-import coinio from "../../assets/coinio.svg";
+import tkd from "../../assets/victorytkd.png";
+import soundify from "../../assets/soundify.png";
+import ckclothing from "../../assets/ckclothing.png";
+import bug from "../../assets/bug.png";
+import coinio from "../../assets/coinio.png";
 import portfolio from "../../assets/portfolio.svg";
 
 export const data = [
@@ -13,6 +15,24 @@ export const data = [
     alt: "Victory TKD",
     external: "https://victorytkd.netlify.app/",
     github: "https://github.com/calvin-kim13/victoryTKD",
+  },
+  {
+    title: "Soundify",
+    description:
+      "Created a full-stack application that requires user sign up or sign in to use the application. The application allows users to listen to music, upload their own music, and add music playlists. Mainly used React, AWS, JWT, Express, MongoDB, mongoose, GraphQL, Ant Design and Github for team collaboration.",
+    image: soundify,
+    alt: "Soundify",
+    external: "https://soundify-home.herokuapp.com/",
+    github: "https://github.com/calvin-kim13/Soundify",
+  },
+  {
+    title: "CKclothing",
+    description:
+      "E-commerce project that allows users to create an account or sign in to start adding items to their cart. The app allows users to add products to their cart, checkout, and add their card information. The project does not have real inventory and the payment platform is not connected to a real bank. Developed with React, Firebase, Stripe, Scss, Styled Components.",
+    image: ckclothing,
+    alt: "CKclothing",
+    external: "https://ckclothing.netlify.app/",
+    github: "https://github.com/calvin-kim13/ckclothing",
   },
   {
     title: "Bug Tracker",

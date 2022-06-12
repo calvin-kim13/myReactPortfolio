@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as FiIcons from "react-icons/fi";
 import * as HiIcons from "react-icons/hi";
+import { Tooltip } from "antd";
 
 const ProjectCard = ({
   title,
@@ -19,24 +20,28 @@ const ProjectCard = ({
       {/* <p className="usedTech">{usedTech}</p> */}
       <ul>
         <li>
-          <a
-            href={github}
-            target="_blank"
-            rel="noreferrer"
-            className="social-link"
-          >
-            <FiIcons.FiGithub />
-          </a>
+          <Tooltip title="GitHub" placement="bottom">
+            <a
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+              className="social-link"
+            >
+              <FiIcons.FiGithub />
+            </a>
+          </Tooltip>
         </li>
         <li>
-          <a
-            href={external}
-            target="_blank"
-            rel="noreferrer"
-            className="social-link"
-          >
-            <HiIcons.HiOutlineExternalLink />
-          </a>
+          <Tooltip title="Live Link" placement="bottom">
+            <a
+              href={external}
+              target="_blank"
+              rel="noreferrer"
+              className="social-link"
+            >
+              <HiIcons.HiOutlineExternalLink />
+            </a>
+          </Tooltip>
         </li>
       </ul>
     </CardWrapper>
