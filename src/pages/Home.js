@@ -5,7 +5,7 @@ import background from "../assets/background3.mp4";
 import Button from "../components/Button";
 import CodeSnippet from "../components/CodeSnippet";
 import SideSocialLinks from "../components/SideSocialLinks";
-import { Fade } from "react-reveal";
+import Fade from "react-reveal/Fade";
 
 const Home = () => {
   let navigate = useNavigate();
