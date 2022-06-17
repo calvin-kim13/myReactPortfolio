@@ -139,6 +139,11 @@ const AboutWrapper = styled.div`
   @media screen and (min-width: 1024px) {
     height: 100vh;
     .about-content-wrapper {
+      margin-top: 3rem;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    .about-content-wrapper {
       margin-top: 5rem;
     }
   }
@@ -202,6 +207,19 @@ const AboutGreetingWrapper = styled.div`
   }
   @media screen and (min-width: 768px) {
     margin-top: 2rem;
+    height: 24rem;
+    width: 17rem;
+    justify-content: flex-start;
+    .h3 {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .social-link-wrapper {
+      margin-top: 1.3rem;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    margin-top: 2rem;
     height: 29rem;
     width: 17rem;
     justify-content: flex-start;
@@ -212,9 +230,6 @@ const AboutGreetingWrapper = styled.div`
     .social-link-wrapper {
       margin-top: 2.2rem;
     }
-  }
-  @media screen and (min-width: 1600px) {
-    // margin-top: 9rem;
   }
 `;
 
