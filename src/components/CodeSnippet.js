@@ -37,6 +37,8 @@ const CodeSnippet = () => {
         <pre className="closing-braces">] ,</pre>
         <em className="parent">"dependencies"</em> {""} : {""} [ <br />
         <em className="nested-children"> "react"</em>, <br />
+        <em className="nested-children"> "typescript"</em>, <br />
+        <em className="nested-children"> "redux-toolkit"</em>, <br />
         <em className="nested-children"> "styled-components"</em>, <br />
         <em className="nested-children"> "express"</em>, <br />
         <em className="nested-children"> "flexbox"</em>, <br />

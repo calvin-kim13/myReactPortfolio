@@ -11,7 +11,8 @@ import background from "../assets/background3.mp4";
 import PageHeader from "../components/PageHeader";
 import { useNavigate } from "react-router-dom";
 import Pdf from "../assets/resume.pdf";
-import Zoom from "react-reveal/Zoom";
+// import Zoom from "react-reveal/Zoom";
+import { Fade } from "react-awesome-reveal";
 
 const About = () => {
   let navigate = useNavigate();
@@ -25,10 +26,10 @@ const About = () => {
       <video loop={true} muted={true} autoPlay={true} playsInline={true}>
         <source src={background} />
       </video>
-      <Zoom>
+      <Fade>
         <PageHeader>Who am I?</PageHeader>
-      </Zoom>
-      <Zoom>
+      </Fade>
+      <Fade direction="up">
         <div className="about-content-wrapper">
           <AboutGreetingWrapper>
             <Avatar
@@ -42,7 +43,9 @@ const About = () => {
             />
             <div className="h3">I'm Calvin...</div>
             <p>
-              I am a softare developer who specializes in front end development.
+              {/* I am a softare developer specializing in front end development. */}
+              Outside of coding, I love sports, especially basketball, hiking,
+              and watching shows on Netflix.
             </p>
             <div className="social-link-wrapper">
               <ul>
@@ -80,25 +83,26 @@ const About = () => {
             </div>
           </AboutGreetingWrapper>
           <AboutTextWrapper>
-            <Zoom>
+            <Fade direction="up">
               <div className="h3">About Me</div>
-            </Zoom>
-            <Zoom>
+            </Fade>
+            <Fade direction="up">
               <p>
                 I am a Full-Stack Developer who is passionate about Front-End
-                Development. I love to develop applications with React and have
-                a strong ability to work with API's thorugh GraphQL. <br />
-                <br />I am currently a student at the University of California,
-                Irvine bootcamp as I am working towards my Full-Stack
-                Development Certificate.
+                Development. I love to develop applications with React and
+                creating polished user interfaces. <br />
+                <br />I have a Full-Stack Web Development certificate from the
+                University of California, Irvine. <br /> <br />I have great
+                attention to detail, I am result-oriented, and I am always
+                willing to learn new things,
               </p>
-            </Zoom>
+            </Fade>
             <Button className="home-btn about-btn" onClick={handleClick}>
               CONTACT ME
             </Button>
           </AboutTextWrapper>
         </div>
-      </Zoom>
+      </Fade>
       <SideSocialLinks />
     </AboutWrapper>
   );
@@ -129,16 +133,11 @@ const AboutWrapper = styled.div`
       justify-content: center;
       flex-direction: row;
       align-items: center;
-      margin-top: 2rem;
+      margin-top: 4rem;
     }
   }
   @media screen and (min-width: 1024px) {
     height: 100vh;
-    .about-content-wrapper {
-      margin-top: 3rem;
-    }
-  }
-  @media screen and (min-width: 1700px) {
     .about-content-wrapper {
       margin-top: 5rem;
     }
@@ -197,17 +196,18 @@ const AboutGreetingWrapper = styled.div`
       opacity: 1;
     }
   }
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
   @media screen and (min-width: 768px) {
     margin-top: 2rem;
-    height: 60%;
+    height: 29rem;
     width: 17rem;
     justify-content: flex-start;
     .h3 {
       margin-top: 1rem;
       text-align: center;
-    }
-    p {
-      margin-top: 1rem;
     }
     .social-link-wrapper {
       margin-top: 2.2rem;
@@ -245,14 +245,13 @@ const AboutTextWrapper = styled.div`
   }
   @media screen and (min-width: 768px) {
     align-items: flex-start;
-    width: 25rem;
+    width: 29rem;
     margin-left: 2rem;
     p {
       text-align: left;
     }
   }
-  @media screen and (min-width: 1200px) {
-    width: 28rem;
+  /* @media screen and (min-width: 1200px) {
     h3 {
       font-size: 2.8rem;
     }
@@ -265,7 +264,7 @@ const AboutTextWrapper = styled.div`
     .about-btn {
       width: 90%;
     }
-  }
+  } */
 `;
 
 export default About;

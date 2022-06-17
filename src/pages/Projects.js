@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { data } from "../components/json/ProjectData";
 import background from "../assets/background3.mp4";
 import PageHeader from "../components/PageHeader";
-import Zoom from "react-reveal/Zoom";
+import { Fade } from "react-awesome-reveal";
 
 const Projects = () => {
   return (
@@ -12,11 +12,11 @@ const Projects = () => {
       <video loop={true} muted={true} autoPlay={true} playsInline={true}>
         <source src={background} />
       </video>
-      <Zoom>
+      <Fade>
         <PageHeader>My Works</PageHeader>
-      </Zoom>
+      </Fade>
       <div className="cards">
-        <Zoom>
+        <Fade direction="up">
           <ProjectCard
             title={data[0].title}
             description={data[0].description}
@@ -25,15 +25,6 @@ const Projects = () => {
             alt={data[0].alt}
             external={data[0].external}
             github={data[0].github}
-          />
-          <ProjectCard
-            title={data[2].title}
-            description={data[2].description}
-            usedTech={data[2].usedTech}
-            image={data[2].image}
-            alt={data[2].alt}
-            external={data[2].external}
-            github={data[2].github}
           />
           <ProjectCard
             title={data[1].title}
@@ -45,13 +36,22 @@ const Projects = () => {
             github={data[1].github}
           />
           <ProjectCard
-            title={data[3].title}
-            description={data[3].description}
-            usedTech={data[3].usedTech}
-            image={data[3].image}
-            alt={data[3].alt}
-            external={data[3].external}
-            github={data[3].github}
+            title={data[2].title}
+            description={data[2].description}
+            usedTech={data[2].usedTech}
+            image={data[2].image}
+            alt={data[2].alt}
+            external={data[2].external}
+            github={data[2].github}
+          />
+          <ProjectCard
+            title={data[4].title}
+            description={data[4].description}
+            usedTech={data[4].usedTech}
+            image={data[4].image}
+            alt={data[4].alt}
+            external={data[4].external}
+            github={data[4].github}
           />
           <ProjectCard
             title={data[3].title}
@@ -63,33 +63,15 @@ const Projects = () => {
             github={data[3].github}
           />
           <ProjectCard
-            title={data[3].title}
-            description={data[3].description}
-            usedTech={data[3].usedTech}
-            image={data[3].image}
-            alt={data[3].alt}
-            external={data[3].external}
-            github={data[3].github}
+            title={data[5].title}
+            description={data[5].description}
+            usedTech={data[5].usedTech}
+            image={data[5].image}
+            alt={data[5].alt}
+            external={data[5].external}
+            github={data[5].github}
           />
-          <ProjectCard
-            title={data[3].title}
-            description={data[3].description}
-            usedTech={data[3].usedTech}
-            image={data[3].image}
-            alt={data[3].alt}
-            external={data[3].external}
-            github={data[3].github}
-          />
-          <ProjectCard
-            title={data[3].title}
-            description={data[3].description}
-            usedTech={data[3].usedTech}
-            image={data[3].image}
-            alt={data[3].alt}
-            external={data[3].external}
-            github={data[3].github}
-          />
-        </Zoom>
+        </Fade>
       </div>
     </ProjectsWrapper>
   );
