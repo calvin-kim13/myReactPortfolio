@@ -13,7 +13,7 @@ export const data = [
     usedTech: "React - MUI - Ant Design - Styled Components",
     image: tkd,
     alt: "Victory TKD",
-    external: "https://victorytkd.netlify.app/",
+    external: "https://www.victorytkdcenter.com/",
     github: "https://github.com/calvin-kim13/victoryTKD",
   },
   {
