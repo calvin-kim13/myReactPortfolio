@@ -40,6 +40,7 @@ const Home = () => {
 };
 
 const HomeWrapper = styled.div`
+  height: fit-content;
   .animation {
     text-shadow: 0 0 15px;
     animation: animate 3s infinite linear;
@@ -64,7 +65,7 @@ const HomeWrapper = styled.div`
   video {
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     position: fixed;
     opacity: 0.9;
     z-index: -1;

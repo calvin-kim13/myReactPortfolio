@@ -50,7 +50,7 @@ const ProjectCard = ({
 
 const CardWrapper = styled.div`
   width: 100%;
-  height: 280px;
+  height: 275px;
   margin: 0 auto;
   padding: 20px 30px;
   position: relative;
@@ -81,7 +81,7 @@ const CardWrapper = styled.div`
   img {
     object-fit: cover;
     width: 100%;
-    height: 280px;
+    height: 275px;
     position: absolute;
     opacity: 0.6;
     top: 0;
@@ -95,6 +95,7 @@ const CardWrapper = styled.div`
   }
   .description {
     opacity: 0.8;
+    font-size: 0.8rem;
     display: none;
     margin-top: -0.7rem;
   }
