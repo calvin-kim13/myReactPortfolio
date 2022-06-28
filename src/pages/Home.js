@@ -40,7 +40,7 @@ const Home = () => {
 };
 
 const HomeWrapper = styled.div`
-  height: fit-content;
+  height: 100vh;
   .animation {
     text-shadow: 0 0 15px;
     animation: animate 3s infinite linear;
@@ -65,7 +65,7 @@ const HomeWrapper = styled.div`
   video {
     object-fit: cover;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     position: fixed;
     opacity: 0.9;
     z-index: -1;
@@ -74,6 +74,7 @@ const HomeWrapper = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (min-width: 1024px) {
+    overflow: hidden;
     justify-content: space-evenly;
   }
 `;

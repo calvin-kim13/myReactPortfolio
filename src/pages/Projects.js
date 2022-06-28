@@ -105,6 +105,9 @@ const ProjectsWrapper = styled.div`
       grid-template-columns: repeat(4, 25%);
     }
   }
+  @media screen and (min-width: 1700px) {
+    overflow: hidden;
+  }
 `;
 
 export default Projects;

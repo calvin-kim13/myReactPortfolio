@@ -22,7 +22,7 @@ export const data = [
       "Created a full-stack application that requires user sign up or sign in to use the application. The application allows users to listen to music, upload their own music, and add music playlists. Mainly used React, AWS, JWT, Express, MongoDB, mongoose, GraphQL, Ant Design and Github for team collaboration.",
     image: soundify,
     alt: "Soundify",
-    external: "https://soundify-home.herokuapp.com/",
+    external: "https://soundify.live",
     github: "https://github.com/calvin-kim13/Soundify",
   },
   {
