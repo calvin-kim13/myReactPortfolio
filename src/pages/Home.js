@@ -40,7 +40,7 @@ const Home = () => {
 };
 
 const HomeWrapper = styled.div`
-  height: 100vh;
+  height: 87.9vh;
   .animation {
     text-shadow: 0 0 15px;
     animation: animate 3s infinite linear;
@@ -74,6 +74,7 @@ const HomeWrapper = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (min-width: 1024px) {
+    height: 100vh;
     overflow: hidden;
     justify-content: space-evenly;
   }
