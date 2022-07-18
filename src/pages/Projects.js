@@ -101,6 +101,7 @@ const ProjectsWrapper = styled.div`
   }
   @media screen and (min-width: 1024px) {
     height: 100vh;
+    overflow: hidden;
     .cards {
       grid-template-columns: repeat(4, 25%);
     }
